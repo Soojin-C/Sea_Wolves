@@ -56,7 +56,66 @@ Cordova and Phonegap are essentially the same except Phonegap has a different se
 		</ul>
 		
 		<h3> Different Parts of the APP </h3>
-			<h5> Plugins </h5>
+		<h5> config.xml </h5>
+		<ul>
+		  <li>Global configuration file</li>
+		  <li>Controls some of the app’s behavior</li>
+		  <li>Root element is widget</li>
+		  <ul>
+		    <li> the app’s reverse domain id<li>
+		    <li>Version: version number</li>
+		    <li>Author</li>
+		    <li>Desription</li>
+		  </ul>
+		<a href="https://cordova.apache.org/docs/en/8.x/config_ref/index.html">More about config</a>
+		</ul>
+		
+		<h5> www folder </h5>
+		<ul>
+		  <li>Where to put your code</li>
+		  <li>www source directory is reproduced within each platform's subdirectory </li>
+		</ul>
+		
+		<h5> Platforms </h5>
+		<ul>
+		  <li>What the project works on: android, ios, etc</li>
+		  <ul>
+		    <li><code>$ cordova platform add android</code></li>
+		    <li><code>$ cordova build </code>: builds project for all platforms</li>
+		    <li><code>$ cordova build ios</code></li>
+		    <li>To check: <code>$ cordova platform ls</code></li>
+		  </ul>
+		  <li>do not edit : constant copies over files from the source www folder</li>
+		  
+		</ul>
+		
+		<h5> Plugins </h5>
+		<ul>
+		  <li>(added) plugins are in this directory</li>
+<li>Syntax: <code>cordova plugin add [PLUGIN ID]</code></li>
+		  <li>Ex: <code>cordova plugin add cordova-plugin-sqlite-2 : SQLite database</code></li>
+		  <ul>
+		    <li> Usage: <code>sqlitePlugin.openDatabase(<db name>)</code></li>
+		  </ul>
+		  <a href="https://cordova.apache.org/plugins/">More Plugins</a>
+		</ul>
+		
+		<h5> Hooks </h5>
+		<ul>
+		  <li>Special scripts to do special commands</li>
+		  <li>
+		    Ex:
+		    <ul><li>before_platform_add:<br> <code>
+		     &lt;hook type="before_build" src="scripts/appBeforeBuild.js" /&gt; </code></li>
+		    </ul>
+		  </li>
+		</ul>
+		
+		<h5> Merges </h5>
+		<ul>
+		  <li>Files in merge will override the file in the same platform in the www file</li>
+		</ul>
+		
 		<h2> Why PhoneGap </h2>
 		<h3>Pros</h3>
 		<ul>
@@ -68,9 +127,26 @@ Cordova and Phonegap are essentially the same except Phonegap has a different se
 		<ul>
 			<li> Native apps are seen as more fluid. Performance on a hybrid app may be slower and the user experience may not be as smooth as a native app </li>
 			<li> Local changes made to the phone, such as a font change, will not be changes for the hybrid app but will for a native app </li>
-			<li>  </li>
+
 		</ul>
 		<h3> Resources </h3>
+		<ul>
+		  <li>
+		    <a href="https://phonegap.com/tool/">
+		      Third Party Tools to use
+		    </a>
+		  </li>
+		  <li>
+		    <a href="https://forums.adobe.com/community/phonegap">
+		      Community
+		    </a>
+		  </li>
+		  <li>
+		    <a href="https://github.com/Soojin-C/PhoneGapCode">
+		      Example Code
+		    </a>
+		  </li>
+		</ul>
 		</div>
 		
 		<!-- Optional JavaScript -->
