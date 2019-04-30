@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		    <meta charset="utf-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		    <!-- Bootstrap CSS -->
+		    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<title>Phone Gap</title>
+	</head>
+
+	<body data-offset=20>
+		<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+		    <h3 class="narvbar-brand">PhoneGap</h3>
+		    <div class="navbar-nav">
+		      <a class="nav-item nav-link" href="#hist">History</a>
+		      <a class="nav-item nav-link" href="#create">Create an App</a>
+			  <a class="nav-item nav-link" href="#parts">Structure of an App</a>
+			  <a class="nav-item nav-link" href="#why">Pros/Cons</a>
+			  <a class="nav-item nav-link" href="#reso">Resources</a>
+		    </div>
+		</nav>
+		<div class = "container">
+		<center> <h1 class = "display-4"> PhoneGap </h1> </center>
+		<br>
+		<center> PhoneGap is a mobile application development framework. It is an open source distribution of Cordova and allows users to create a mobile app across any platform using HTML5, JavaScript and CSS. 
+ </center>
+ 
+ 		<br>
+ 	    <h3 id = "hist"> </h3>
+		<h3 > History </h3>
+		
+		<p> First developed by Nitobi Software
+Once Nitobi Software was acquired by Adobe, its code was contributed to the Apache Software Foundation, which was later used to create the new project Apache Cordova. 
+Cordova and Phonegap are essentially the same except Phonegap has a different set of plugins and Cordova is always open source.
+</p>
+		
+		<h3 id="create"> How to create an App </h3>
+		<p> To start, download the Desktop app and the mobile app </p>
+		<div class="container">
+		  <div class="row">
+			<div class = "col">
+				<div class= "card" style="width: 20rem;">
+				  <img src="img/1-newproj.png" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <p class="card-text"> First go to the green plus and click <em>Create new PhoneGap project</em> to create a new app</p>
+				  </div>
+				</div>
+			</div>
+			<div class = "col">
+				<div class="card" style="width: 20rem;">
+				  <img src="img/2-projname.png" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <p class="card-text"> Then choose the path where the local files will be held, the name of the project and the optional id</p>
+				  </div>
+				</div>
+			</div>
+			<div class = "col">
+				<div class="card" style="width: 20rem;">
+				  <img src="img/3-createdproj.png" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <p class="card-text">The app is created! Here the app Demo is running on the server http://192.168.1.2:3000 </p>
+				  </div>
+				</div>
+			</div>
+		</div>	
+		
+		<br>
+		
+		Phonegap also has a Command Line Interface (CLI)
+		<ul> 
+			<li> Cordova CLI: </li> 
+			<ol> 
+				<li> Download Node.js <a href = "https://nodejs.org/en/download/"> HERE </a></li> 
+				<li> <em> (optional) download git client </em></li> 
+				<li> <code> $ sudo npm install -g cordova </code> 
+				<br>
+					Windows:  C:\>npm install -g cordova
+					<ul> 
+						<li> Requires npm, a JavaScript package manager. Node.js uses npm as its default package manager. 
+						</li> 
+					<ul>
+				</li>
+			</ol>
+			<li>
+				To create a phonegap project:
+					<ul>
+						<li> <code> cordova create &lt;path&gt; &lt;id - reverse domain&gt; &lt;name&gt; </code> 
+						</li>
+					</ul>
+			</li>	
+		</ul>
+		
+		<br>
+		
+		<h5>Launching the App:</h5>
+		<div class = "container">
+			<div class = row>
+				<div class = "col"> 
+					<div class= "card" style="width: 20rem;">
+					  <img src="img/4-phone.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <p class="card-text"> Here is where we can launch the app using the server address </p>
+					  </div>
+					</div>
+				</div>
+				<div class = "col"> 
+					<div class= "card" style="width: 20rem;">
+					  <img src="img/6-animation.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <p class="card-text"> An example of an app and its functionality</p>
+					  </div>
+					</div>
+				</div>
+				<div class = "col"> 
+					<div class= "card" style="width: 20rem;">
+					  <img src="img/7-animation2.jpg" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <p class="card-text"> Another example of the app functioning</p>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<br>
+		
+		<h3 id="parts"> Different Parts of the APP </h3>
+		<h5> config.xml </h5>
+		<ul>
+		  <li>Global configuration file</li>
+		  <li>Controls some of the app’s behavior</li>
+		  <li>Root element is widget</li>
+		  <ul>
+		    <li> the app’s reverse domain id</li>
+		    <li>Version: version number</li>
+		    <li>Author</li>
+		    <li>Desription</li>
+		  </ul>
+		<a href="https://cordova.apache.org/docs/en/8.x/config_ref/index.html">More about config</a>
+		</ul>
+		
+		<h5> www folder </h5>
+		<ul>
+		  <li>Where to put your code</li>
+		  <li>www source directory is reproduced within each platform's subdirectory </li>
+		</ul>
+		
+		<h5> platforms </h5>
+		<ul>
+		  <li>What the project works on: android, ios, etc</li>
+		  <ul>
+		    <li><code>$ cordova platform add android</code></li>
+		    <li><code>$ cordova build </code>: builds project for all platforms</li>
+		    <li><code>$ cordova build ios</code></li>
+		    <li>To check: <code>$ cordova platform ls</code></li>
+		  </ul>
+		  <li>do not edit : constant copies over files from the source www folder</li> 
+		</ul>
+		
+		<h5> plugins </h5>
+		<ul>
+		  <li>(added) plugins are in this directory</li>
+<li>Syntax: <code>cordova plugin add [PLUGIN ID]</code></li>
+		  <li>Ex: <code>cordova plugin add cordova-plugin-sqlite-2 : SQLite database</code></li>
+		  <ul>
+		    <li> Usage: <code>sqlitePlugin.openDatabase(<db name>)</code></li>
+		  </ul>
+		  <a href="https://cordova.apache.org/plugins/">More Plugins</a>
+		</ul>
+		
+		<h5> hooks </h5>
+		<ul>
+		  <li>Special scripts to do special commands</li>
+		  <li>
+		    Ex:
+		    <ul><li>before_platform_add:<br> <code>
+		     &lt;hook type="before_build" src="scripts/appBeforeBuild.js" /&gt; </code></li>
+		    </ul>
+		  </li>
+		</ul>
+		
+		<h5> merges </h5>
+		<ul>
+		  <li>Files in merge will override the file in the same platform in the www file</li>
+		</ul>
+				
+		<br>
+		
+		<h3 id = "why"> Why PhoneGap </h3>
+		<div class = "container">
+			<div class = "row">
+				<div class = "col">
+					<center><h4>Pros</h4></center>
+					<ul>
+						<li> No need to learn any new languages specific to platform. Uses HTML, JavaScript and CSS </li>
+						<li> Avaliable to use across all platforms </li>
+						<li> In the long run, it will be easier for developers because they don't need to keep up with all the changes on multiple platforms </li>
+					</ul>
+				</div>
+				<div class = "col">
+					<center><h4> Cons </h4></center>
+					<ul>
+						<li> Native apps are seen as more fluid. Performance on a hybrid app may be slower and the user experience may not be as smooth as a native app </li>
+						<li> Local changes made to the phone, such as a font change, will not be changes for the hybrid app but will for a native app </li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<h3 id="reso"> Resources </h3>
+		<ul>
+		  <li>
+		    <a href="https://phonegap.com/tool/">
+		      Third Party Tools to use
+		    </a>
+		  </li>
+		  <li>
+		    <a href="https://forums.adobe.com/community/phonegap">
+		      Community
+		    </a>
+		  </li>
+		  <li>
+		    <a href="https://github.com/Soojin-C/PhoneGapCode">
+		      Example Code
+		    </a>
+		  </li>
+		</ul>
+		</div>
+		
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>
